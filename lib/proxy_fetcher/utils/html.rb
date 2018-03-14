@@ -4,7 +4,7 @@ module ProxyFetcher
       def clear(text)
         return if text.nil? || text.empty?
 
-        text.strip.gsub(/[ \t]/i, '')
+        text.strip.gsub(/[ \t]/i, '').sub(/^[0]+/, '')
       end
 
       def convert_to_int(text)
